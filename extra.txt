@@ -1,0 +1,33 @@
+<View style={styles.container}>
+        <KeyboardAvoidingView
+          keyboardVerticalOffset={50}
+          behavior={'padding'}
+          style={styles.header}>
+          <Text style={styles.contentTitle}>{'Verify Account'}</Text>
+          <Text style={styles.contentText}>
+            {'Enter Your Verification Code'}
+          </Text>
+          <Text style={styles.contentText}>{'Which Send to'}</Text>
+          <Text style={styles.contentText}>{'+92*******96'}</Text>
+          <View>
+            <TextInput
+              ref={input => (textInput = input)}
+              onChangeText={onChangeText}
+              style={{width: 0, height: 0, backgroundColor: 'black'}}
+              value={internalVal}
+              maxLength={lengthInput}
+              returnKeyType="done"
+              keyboardType="numeric"
+            />
+            <View style={styles.containerInput}>
+              {Array(lengthInput)
+                .fill()
+                .map((data, index) => {
+                  <View key={index} style={styles.cellView}>
+                    
+                  </View>;
+                })}
+            </View>
+          </View>
+        </KeyboardAvoidingView>
+      </View>
